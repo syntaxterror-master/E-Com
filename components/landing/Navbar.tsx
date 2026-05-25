@@ -3,9 +3,11 @@ import { Heart, ShoppingCart, UserRound } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Field } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import TopBanner from "./TopBanner"
 
 const Navbar = () => {
-  return (
+  return (<>
+    <TopBanner />
   <header className='py-4 px-10 border-b '>
     <nav className="flex items-center justify-between">
 
@@ -34,6 +36,7 @@ const Navbar = () => {
       </Field>
       </div>
   </header>
+  </>
   )
 }
 

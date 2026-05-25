@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lato, Merriweather, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import {Footer} from "@/components/landing/Footer";
+import Navbar from "@/components/landing/Navbar";
 
 const robotoMonoRobotoMono = Roboto_Mono({subsets:['latin','latin-ext','cyrillic','cyrillic-ext','greek','vietnamese'],weight:['100','200','300','400','500','600','700'],variable:'--font-roboto-mono'});
 
@@ -34,7 +36,11 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, latoLato.variable, merriweatherMerriweather.variable, robotoMonoRobotoMono.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }
