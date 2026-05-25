@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lato, Merriweather, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const robotoMonoRobotoMono = Roboto_Mono({subsets:['latin','latin-ext','cyrillic','cyrillic-ext','greek','vietnamese'],weight:['100','200','300','400','500','600','700'],variable:'--font-roboto-mono'});
+
+const merriweatherMerriweather = Merriweather({subsets:['cyrillic','cyrillic-ext','latin','latin-ext','vietnamese'],weight:['300','400','500','600','700','800','900'],variable:'--font-merriweather'});
+
+const latoLato = Lato({subsets:['latin','latin-ext'],weight:['100','300','400','700','900'],variable:'--font-lato'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, latoLato.variable, merriweatherMerriweather.variable, robotoMonoRobotoMono.variable)}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
