@@ -25,7 +25,9 @@ const Navbar = () => {
       <div className="flex items-center gap-10">
           <Heart />
           <ShoppingCart />
+          <Link href={"/login"}>
           <UserRound />
+          </Link>
       </div>
 
     </nav>

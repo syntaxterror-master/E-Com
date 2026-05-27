@@ -79,7 +79,7 @@ const defaultProps: Footer2Props = {
 const MAX_SECTIONS = 4;
 
 const Footer = (props: Props) => {
-  const { logo, description, sections, copyright, legalLinks, className } = {
+  const { sections, copyright, legalLinks, className } = {
     ...defaultProps,
     ...props,
   };

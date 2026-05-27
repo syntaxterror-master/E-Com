@@ -1,12 +1,13 @@
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
+import { ApplicationShell1 } from "@/components/admin/Sidebar"
+import { getCurrentUser } from "@/lib/session";
 
-      <main className="min-h-full flex flex-col">
-        {children}
+export default async function AdminLayout({children}: {children: React.ReactNode}) {
+  const user = await getCurrentUser();
+  return (
+      <main>
+        <ApplicationShell1 user={user}>
+          {children}
+        </ApplicationShell1>
       </main>
-  );
+  )
 }

@@ -4,7 +4,7 @@ const FeaturedProduct = () => {
   return (
     <section className="my-10 lg:my-25">
       <Link href={"/"}>
-      <div className="bg-[url(/products/Featured_Product.jpeg)] bg-center bg-cover w-full h-125"/>
+      <div className="bg-[url(/images/featured_product.webp)] bg-center bg-cover w-full h-125"/>
       </Link>
     </section>
   )
